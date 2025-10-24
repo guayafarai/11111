@@ -49,9 +49,20 @@ verificarAuth();
             <a href="#" data-section="proveedores" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-700 transition">
                 <i class="fas fa-truck"></i><span>Proveedores</span>
             </a>
+            
+            <!-- Nuevas secciones -->
             <?php if ($_SESSION['usuario_rol'] === 'admin'): ?>
+            <div class="border-t border-gray-700 my-2"></div>
+            <p class="px-4 py-2 text-xs text-gray-400 uppercase font-semibold">Administración</p>
+            
+            <a href="#" data-section="sucursales" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-700 transition">
+                <i class="fas fa-store"></i><span>Sucursales</span>
+            </a>
             <a href="#" data-section="usuarios" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-700 transition">
                 <i class="fas fa-user-shield"></i><span>Usuarios</span>
+            </a>
+            <a href="#" data-section="configuracion" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-700 transition">
+                <i class="fas fa-cog"></i><span>Configuración</span>
             </a>
             <?php endif; ?>
         </nav>
@@ -89,6 +100,8 @@ verificarAuth();
         <main id="contentArea" class="p-6"></main>
     </div>
 
+    <!-- Scripts -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/configuracion_sucursales.js"></script>
 </body>
 </html>
